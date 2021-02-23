@@ -1,0 +1,11 @@
+body {
+    background-color: #edd263;
+}
+.search-style {
+    border-radius: 5px 0 0 5px;
+}
+.btn-style {
+    background: #3B2D64;
+    color: white;
+    border-radius: 0 5px 5px 0;
+}
