@@ -21,7 +21,7 @@ const displayMeals = meals => {
         const mealDiv = document.createElement('div'); 
         mealDiv.className = 'food bg-white mb-3 rounded'
         mealDiv.innerHTML = `
-            <a href="#" onclick="getMealById(${meal.idMeal})" id="detail">
+            <a href="#0" onclick="getMealById(${meal.idMeal})" id="detail">
                 <img class="img-fluid mb-3" src="${meal.strMealThumb}" alt="">
                 <h4>${meal.strMeal}</h4>
             </a>
@@ -33,20 +33,20 @@ const displayMeals = meals => {
 
 
 
-const getMealById = mealId => {
-    const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`
-    // load data 
+
+// display meal info 
+const getMealById = id => {
+    const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
     fetch(url)
     .then(res => res.json())
-    .then(data => displayInfoMill(data.meals))
+    .then(data => displayInfoMill(data.meals[0]))
 }
 
 
 // display food info
-const displayInfoMill = info => {
+const displayInfoMill = detail => {
     const mealInfo = document.getElementById('meal-info'); 
-    info.forEach(detail => {
-        const div = document.createElement('div');
+    const div = document.createElement('div');
         div.style.width = '18rem'; 
         div.className = 'card mx-auto mb-3'; 
         div.innerHTML = `
@@ -68,9 +68,5 @@ const displayInfoMill = info => {
             </div>
         `;
         mealInfo.appendChild(div)
-        console.log(detail)
-    });
-    
 }
-
 
