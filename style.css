@@ -9,3 +9,18 @@ body {
     color: white;
     border-radius: 0 5px 5px 0;
 }
+
+.display-img {
+    
+    margin-bottom: 15px;
+}
+
+.food {
+    text-align: center;
+    padding: 15px;
+}
+
+#detail {
+    text-decoration: none;
+    color: #000;
+}

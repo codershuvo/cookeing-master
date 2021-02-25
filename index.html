@@ -17,7 +17,9 @@
     <header>
         <section class="container py-4">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="index.html"><h5>Cooking Master</h5></a>
+                <a class="navbar-brand" href="index.html">
+                    <h5>Cooking Master</h5>
+                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -46,40 +48,25 @@
             <div id="seatch-box" class="mb-5">
                 <nav class="navbar navbar-light d-flex justify-content-center">
                     <form class="form-inline">
-                        <input class="form-control search-style" type="search" placeholder="Search For Meal..."
-                            aria-label="Search">
-                        <button class="btn btn-style" type="submit">Search</button>
+                        <input id="search-field" class="form-control search-style" placeholder="Search For Meal...">
+                        <button onclick="searchMeals()" type="button" class="btn btn-style">Search</button>
                     </form>
                 </nav>
             </div>
-            <div class="container" id="related-food">
-                <div class="row">
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
-                        <div class="food bg-white mb-3 d-flex justify-content-center rounded">
-                            
-                            <h4>Lorem, ipsum dolor.</h4>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
-                        <div class="food bg-white mb-3 d-flex justify-content-center rounded">
-                            <h4>Lorem, ipsum dolor.</h4>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
-                        <div class="food bg-white mb-3 d-flex justify-content-center rounded">
-                            <h4>Lorem, ipsum dolor.</h4>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
-                        <div class="food bg-white mb-3 d-flex justify-content-center rounded">
-                            <h4>Lorem, ipsum dolor.</h4>
-                        </div>
-                    </div>
-                </div>
+        </section>
+        <section class="container" id="meal-info">
+            
+            
+            
+        </section>
+        <section class="container d-flex justify-content-center" id="related-food">
+            <div class="row " id="meal-container">
+
             </div>
         </section>
     </main>
     <footer>
+
 
     </footer>
 
@@ -97,7 +84,7 @@
         crossorigin="anonymous"></script>
 
     <!-- main js -->
-    <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
