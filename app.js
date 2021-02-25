@@ -18,7 +18,17 @@ const searchMeals = () => {
     // load data
     fetch(url)
     .then(res => res.json())
-    .then(data => displayMeals(data.meals))
+    .then(data => {
+        if (data.meals == null) {
+            const searchBoxResult = document.getElementById('search-box'); 
+            const div = document.createElement('div'); 
+            div.innerHTML = `<h3>Don't Match the Meal</h3>`
+            searchBoxResult.appendChild(div);
+            
+        } else {
+            displayMeals(data.meals); 
+        }
+    })
 }
 
 
