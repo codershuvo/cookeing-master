@@ -1,7 +1,19 @@
-const search = document.getElementById('search-field');
+const input = document.getElementById('search-field');
+const submit = document.getElementById('search-click'); 
+
+submit.addEventListener('click', function(){
+    if (input.value == "") {
+        alert('Please Enter Valid Word for Search Box'); 
+    } else {
+        searchMeals();
+        input.value = ""; 
+    }
+})
+
+
 
 const searchMeals = () => {
-    const searchText = search.value; 
+    const searchText = input.value; 
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`
     // load data
     fetch(url)
