@@ -9,6 +9,9 @@ const searchMeals = () => {
     .then(data => displayMeals(data.meals))
 }
 
+
+
+
 // display meal data 
 const displayMeals = meals => {
     const mealContainer = document.getElementById('meal-container'); 
@@ -28,6 +31,8 @@ const displayMeals = meals => {
     });
 }; 
 
+
+
 const getMealById = mealId => {
     const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`
     // load data 
@@ -45,7 +50,7 @@ const displayInfoMill = info => {
         div.style.width = '18rem'; 
         div.className = 'card mx-auto mb-3'; 
         div.innerHTML = `
-            <img class="card-img-top" src="${detail.strMealThumb}" alt="Card image cap">
+            <img class="card-img-top img-fluid p-1" src="${detail.strMealThumb}" alt="Card image cap">
             <div class="card-body">
                 <h4>${detail.strMeal}</h4>
                 <ul class="list-group list-group-flush">
